@@ -4,7 +4,7 @@ import mongoose from "mongoose";
 import helmet from "helmet";
 import morgan from "morgan";
 import UserRoute from "./routes/Users.js";
-// import PostRoute from "./routes/Posts.js"
+import PostRoute from "./routes/Posts.js"
 import AuthRoute from "./routes/Auth.js";
 
 
@@ -26,9 +26,9 @@ app.use(helmet())
 //add informarion in console 
 app.use(morgan("common"))
 
-app.use("/api/auth" , AuthRoute)
-app.use("/api/users" ,UserRoute);
-// app.use("/api/posts" ,PostRoute);
+app.use("/api/auth"   ,AuthRoute)
+app.use("/api/users"  ,UserRoute);
+app.use("/api/posts"  ,PostRoute);
 
 
 

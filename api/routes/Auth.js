@@ -15,6 +15,7 @@ Router.post("/register", async (req, res) => {
             email: req.body.email,
            
         })
+        //save user and respond 
         const user = await Newuser.save();
         res.status(200).json(user);
 
