@@ -12,8 +12,8 @@ const Home = () => {
      <Topbar />
      <div className="homContainer">
        <Sidebar />
-       <Feed/>
-       <Rightbar/>
+       <Feed />
+       <Rightbar />
      </div>
     </>
     )

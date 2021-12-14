@@ -8,10 +8,13 @@ import BookmarkIcon from '@mui/icons-material/Bookmark';
 import GroupIcon from '@mui/icons-material/Group';
 import PlayCircleFilledIcon from '@mui/icons-material/PlayCircleFilled';
 import ChatIcon from '@mui/icons-material/Chat';
+import CloseFriend from "../closeFreind/CloseFriend";
+import {Users} from "../../dummyData"
 
 const sidebar = () => {
     return (
         <div className="sidebar">
+            
             <div className="sidebarWrapper">
                 <ul className="sidebarList">
                     <li className="sidebarListItem">
@@ -51,6 +54,16 @@ const sidebar = () => {
                         <span className="sidebarListItemText">Courses</span>
                     </li>
                 </ul>
+                <button className="sidbarButton">
+                    Show More
+                </button>
+                <hr className="sidvbarHr" />
+                <ul className="sidebarFriendList">
+                  {Users.map(user=>{
+                      return    <CloseFriend key={user.id} user={user}/>
+                  }) }
+                </ul>
+
             </div>
         </div>
     )
