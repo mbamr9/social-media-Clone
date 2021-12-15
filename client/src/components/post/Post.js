@@ -7,7 +7,10 @@ const Post = ({post}) => {
      const [like , setLike ]= useState(post.like);
      const [liked ,setliked] = useState(false);
 
-    const  likeHandler
+    const  likeHandler =()=>{
+        setLike(liked ?  like-1 :like+1)
+        setliked(!liked)
+    }
     return (
         <div className="post">
             <div className="postwrapper">

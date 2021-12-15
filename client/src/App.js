@@ -1,11 +1,14 @@
-import Home from "./pages/Home/Home";
+// import Home from "./pages/Home/Home";
+// import Profile from "./pages/profile/Profile";
+
+import Login from "./components/login/Login";
 
 
 function App() {
   return (
     <div>
-     <Home/>
-    </div>
+  
+     <Login/>    </div>
   );
 }
 
