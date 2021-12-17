@@ -1,7 +1,7 @@
 import Online from "../online/Online"
 import "./rightbar.css"
 import { Users } from "../../dummyData"
-const Rightbar = ({profile}) => {
+const Rightbar = ({user}) => {
     const HomeRightbar =()=>{
         return(
             <>
@@ -26,6 +26,7 @@ const Rightbar = ({profile}) => {
     };
 
     const ProfileRightbar =() =>{
+        const PF = process.env.REACT_APP_PUBLIC_FOLDER;
         return (
             <>
             
@@ -35,15 +36,15 @@ const Rightbar = ({profile}) => {
             <div className="rightbarInfo">
                 <div className="rightbarInfoitem">
                     <span className="rightbarInfoKey">City:</span>
-                    <span className="rightbarInfoValue">New York</span>
+                    <span className="rightbarInfoValue">{user.city}</span>
                 </div>
                 <div className="rightbarInfoitem">
                     <span className="rightbarInfoKey">From:</span>
-                    <span className="rightbarInfoValue">Madrid</span>
+                    <span className="rightbarInfoValue">{user.from}</span>
                 </div>
                 <div className="rightbarInfoitem">
                     <span className="rightbarInfoKey">Relationship</span>
-                    <span className="rightbarInfoValue">Single</span>
+                    <span className="rightbarInfoValue">{user.relationship ===1 ? "single" :user.relationship === 2 ? "cupole" : "nothing"}</span>
                 </div>
                 <div className="rightbarInfoitem">
                     <span className="rightbarInfoKey"></span>
@@ -56,27 +57,27 @@ const Rightbar = ({profile}) => {
 
             <div className="rightbarFollowings">
                 <div className="rightbarFollowing">
-                    <img className="rightbarFollowingImg" src="/assets/person/1.jpeg" alt="" />
+                    <img className="rightbarFollowingImg" src={`${PF}person/1.jpeg`} alt="" />
                     <span className="rightbarFollowingName"> jogn cartert</span>
                 </div>
                 <div className="rightbarFollowing">
-                    <img className="rightbarFollowingImg" src="/assets/person/2.jpeg" alt="" />
+                    <img className="rightbarFollowingImg" src={`${PF}person/2.jpeg`} alt="" />
                     <span className="rightbarFollowingName"> jogn cartert</span>
                 </div>
                 <div className="rightbarFollowing">
-                    <img className="rightbarFollowingImg" src="/assets/person/3.jpeg" alt="" />
+                    <img className="rightbarFollowingImg" src={`${PF}person/3.jpeg`} alt="" />
                     <span className="rightbarFollowingName"> jogn cartert</span>
                 </div>
                 <div className="rightbarFollowing">
-                    <img className="rightbarFollowingImg" src="/assets/person/4.jpeg" alt="" />
+                    <img className="rightbarFollowingImg" src={`${PF}person/4.jpeg`} alt="" />
                     <span className="rightbarFollowingName"> jogn cartert</span>
                 </div>
                 <div className="rightbarFollowing">
-                    <img className="rightbarFollowingImg" src="/assets/person/5.jpeg" alt="" />
+                    <img className="rightbarFollowingImg" src={`${PF}person/5.jpeg`} alt="" />
                     <span className="rightbarFollowingName"> jogn cartert</span>
                 </div>
                 <div className="rightbarFollowing">
-                    <img className="rightbarFollowingImg" src="/assets/person/6.jpeg" alt="" />
+                    <img className="rightbarFollowingImg" src={`${PF}person/6.jpeg`} alt="" />
                     <span className="rightbarFollowingName"> jogn cartert</span>
                 </div>
             </div>
@@ -87,7 +88,7 @@ const Rightbar = ({profile}) => {
     return (
         <div className="rightbar"> 
             <div className="rightBarWrapper">
-              {profile ? <ProfileRightbar /> :<HomeRightbar />}
+              {user ? <ProfileRightbar /> :<HomeRightbar />}
             </div>
         </div>
     )

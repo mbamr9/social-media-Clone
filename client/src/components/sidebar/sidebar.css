@@ -3,9 +3,12 @@
     flex: 3;
     height: calc(100vh - 50px);
     overflow-y: scroll;
+  
+    z-index: 1;
+}
+.element{
     position: sticky;
     top: 50px;
-    z-index: 1;
   }
 
 ::-webkit-scrollbar{

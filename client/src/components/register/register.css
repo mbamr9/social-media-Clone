@@ -20,6 +20,9 @@
     flex-direction: column;
     justify-content: center;
 }
+.loginRight{
+    height: 450px;
+}
 .loginLogo{
     font-size: 50px;
     font-weight: 800;
@@ -31,13 +34,13 @@
     font-size: 24px;
 }
 .loginBox{
-    height: 400px;
+    height: 429px;
     padding: 20px;
     background-color: white;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-evenly;
 
 }
 .loginInput{

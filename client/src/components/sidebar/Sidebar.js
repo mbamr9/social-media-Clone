@@ -13,7 +13,7 @@ import {Users} from "../../dummyData"
 
 const sidebar = () => {
     return (
-        <div className="sidebar">
+        <div className="sidebar element">
             
             <div className="sidebarWrapper">
                 <ul className="sidebarList">
