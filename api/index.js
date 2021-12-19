@@ -7,7 +7,8 @@ import morgan from "morgan";
 import UserRoute from "./routes/Users.js";
 import PostRoute from "./routes/Posts.js"
 import AuthRoute from "./routes/Auth.js";
-import path from "path"
+
+import path from 'path'
 
 
 
@@ -20,7 +21,7 @@ mongoose.connect(process.env.ACCESS_KEY, ()=>{
 });
 
 const __dirname = path.resolve();
-app.use("/images" , express.static(path.join(__dirname , "public/images")))
+app.use("/images" , express.static(path.join(__dirname , "/public/images")))
 
 //middleware 
 
@@ -35,7 +36,7 @@ const storage = multer.diskStorage({
         cb(null , "public/images")
     },
     filename: (req,file,cb)=>{
-        cb(null, file.originalname)
+        cb(null, req.body.name)
     }
 })
 
